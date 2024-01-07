@@ -1,0 +1,598 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    transition: background-color 1s ease-out 100ms;
+}   
+
+body{
+  display: grid;
+  height: 100%;
+  width: 97vw;
+  background-image: url(images/Arman.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+/*Social Media*/
+.wrapper .icon i {
+    color: black;
+    transition: .4s linear;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 25px;
+    background-color: white;
+    border-radius: 50px;
+    height: 60px;
+    width: max-content;
+    margin: auto;
+    background-color: #1ebf90;
+    margin-bottom: 20px;
+    margin-top: -160px;
+}
+
+.abc{
+    display: flex; 
+    justify-content: space-around;
+}
+
+.wrapper .icon {
+position: relative;
+border-radius: 50%;
+padding: 15px;
+margin: 10px;
+width: 50px;
+height: 50px;
+font-size: 18px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+cursor: pointer
+}
+
+.wrapper .icon::before {
+border-radius: 50%;
+border-left: 4px solid;
+border-right: 4px solid;
+transform: skewX(20deg);
+color: #171754;
+}
+
+.wrapper .icon::after {
+border-radius: 50%;
+border-top: 4px solid;
+border-bottom: 4px solid;
+transform: skewY(-20deg);
+color: #04193d;
+}
+
+
+.wrapper .icon:hover::before {
+content: '';
+position: absolute;
+box-sizing: border-box;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+transition: .4s linear;
+border-radius: 50%;
+border-left: 4px solid;
+border-right: 4px solid;
+transform: skewX(20deg);
+color: #04193d;
+}
+
+.wrapper .icon:hover::after {
+content: '';
+position: absolute;
+box-sizing: border-box;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+transition: .4s linear;
+border-radius: 50%;
+border-top: 4px solid;
+border-bottom: 4px solid;
+transform: skewY(-20deg);
+color: #04193d;
+}
+
+.wrapper .tooltip {
+position: absolute;
+top: 0;
+font-size: 14px;
+color: #ffffff;
+padding: 5px 8px;
+border-radius: 5px;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+pointer-events: none;
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+opacity: 0;
+}
+
+.wrapper .icon:hover .tooltip {
+top: -38px;
+opacity: 1;
+visibility: visible;
+pointer-events: auto;
+background-color: #04193d;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+transform: scale(.8);
+transition: .4s linear;
+}
+
+/*Pre-Loader*/
+
+#loading{
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background: orange no-repeat center;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.loader {
+    box-sizing: border-box; 
+    width: 100%; 
+    height: 100%;
+    border: 5px solid #162534; 
+    border-top-color: #4bc8eb; 
+    border-bottom-color: #f13a8f; 
+    border-radius: 50%; 
+    animation: rotate 5s linear infinite; 
+}
+
+.loader-inner{
+    border-top-color: #36f372;
+    border-bottom-color: #fff;
+    animation-duration: 2.5s;
+}
+
+  @keyframes rotate {
+    0%{
+        transform: scale(1) rotate(360deg);
+    }
+    50%{
+        transform: scale(.8) rotate(-360deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+
+}
+
+
+/*footer*/
+.footer{
+    width: 100%;
+    background: linear-gradient(to right, #1ebf90, #1E2F97);
+    color: #fff;
+    padding: 18px 0 30px;
+    font-size: 13px;
+    line-height: 14px;
+    transition: background-color 2s ease-out 100ms;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    bottom: 0;
+    position: fixed;
+}
+
+#loginstatus{
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: #1ebf90;
+  color: white;
+  font-family: monospace;
+  font-size: 14px;
+  border-style: none;
+}
+.Footer .copyright
+{
+    padding-left: 25px;
+}
+
+.fullPage{
+    height: 100vh;
+    width: 100  vw;
+    margin: 70px 0px;
+    margin-left: 20px;
+}
+/*Actual*/
+
+.details{
+    height: 300px;
+    width: 100%;
+    padding: 20px;
+    text-align: flex-start;
+    font-size: 18px;
+    margin: 20px;
+    margin-top: 320px;
+}
+
+.Common{
+    height: 400px;
+    width: 97%;
+    background-color: transparent;
+    margin: 20px;
+    border-radius: 50px;
+    border: 2px solid #1ebf90;
+    margin: 60px auto;
+    color: #04193d;
+    font-size: 20px;
+    padding: 40px;
+}
+
+.Common h1{
+    color: dodgerblue;
+    margin-bottom: 40px;
+}
+
+.Common p{
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+#Songs{
+    height: 930px;
+}
+
+#Songs Button{
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    border: none;
+    background-color: #1ebf90;
+    font-size: 18px;
+}
+
+.flexx{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+}
+
+#Songs img{
+    height: 300px;
+    width: 300px;
+}
+
+#Awards img{
+    height: 300px;
+    width: 300px;
+}
+
+#About{
+    margin-top: -180px;
+}
+
+#Awards{
+    margin-bottom: 200px;
+    height: 600px;
+}
+
+.Common:hover{
+    background-color: black;
+    color: white;
+}
+/**/
+@media screen and (max-width: 950px){
+
+    body{
+    background-image: url(images/yellow.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+
+    .navbar{
+    width: 100%;
+    height: 100px;
+}
+
+.fullpage{
+    margin: 0px;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+.abc{
+    display: block;
+}
+
+.navbar ul{
+    display: none;
+}
+
+.navbar a.active ul{
+    display: block;
+    height: 
+}
+.navbar ul li
+{
+    margin: 0 5px;    
+}
+
+.navbar ul li a{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+    height: 100%;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.navbar a:hover, .navbar a.active
+{
+    background-color: white;
+    color: black;
+    height: 100%;
+    transition: all .5s ease ;
+}
+#toggle{
+    display: none;
+}
+.togglearea{
+    background-color: #1ebf90;
+    color: white;
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+.togglearea label
+{
+    background-color: white;
+    height: 35px;
+    width: 35px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.togglearea label span
+{
+   background-color: black;
+   height: 4px;
+   width: 80%;
+   margin: 2px 0px;
+   border-radius: 10px;
+}
+.togglearea{
+    display: none;
+}
+
+
+.details{
+    height: 300px;
+    width: 800px;
+    padding: 20px;
+    text-align: flex-start;
+    font-size: 18px;
+    margin: 20px;
+    margin-top: 820px;
+}
+
+.Common{
+    height: all;
+    width: 97%;
+    background-color: transparent;
+    margin: 20px;
+    border-radius: 50px;
+    border: 2px solid #1ebf90;
+    margin: 60px auto;
+    color: #04193d;
+    font-size: 20px;
+    padding: 40px;
+    margin-top: 100px;
+}
+
+.Common h1{
+    color: dodgerblue;
+    margin-bottom: 40px;
+}
+
+.Common p{
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+#Songs{
+    height: max-content;
+}
+
+#Songs Button{
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    border: none;
+    background-color: #1ebf90;
+    font-size: 18px;
+}
+
+.flexx{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 50px auto;
+}
+
+#Songs img{
+    height: 300px;
+    width: 300px;
+}
+
+#Awards img{
+    height: 300px;
+    width: 300px;
+}
+
+#About{
+    margin-top: 10px;
+    height: 650px;
+}
+
+#Awards{
+    margin-bottom: 200px;
+    height: 1200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+p{
+    font-size: 1.5rem;
+}
+#Awards p{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.Common:hover{
+    background-color: black;
+    color: white;
+}
+
+}
+
+/* Navigation Bar */
+.navbar{
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    align-items: center;
+    background: linear-gradient(to right, #1E2F97, #1ebf90);
+    color: #fff;
+    justify-content: space-between;
+    transition: background-color 2s ease-out 100ms;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 60px;
+}
+
+.navbar .logo{
+    font-size: 33px;
+    align-items: center; 
+    color: white;
+    font-weight: 600;
+    padding-left: 20px;
+}
+
+.navbar ul{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    display: flex;
+    list-style: none;
+}
+.navbar ul li
+{
+    margin: 0 5px;    
+}
+.navbar a.img1{
+
+    display: flex;
+    justify-content: center;
+    padding-top: 0px;
+    padding-bottom: 4px;
+}
+.navbar ul li a{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+    height: 100%;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+.navbar a:hover, .navbar a.active
+{
+    background-color: white;
+    color: black;
+    height: 100%;
+    transition: all .5s ease ;
+}
+#toggle{
+    display: none;
+}
+.togglearea{
+    background-color: #1ebf90;
+    color: white;
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+.togglearea label
+{
+    background-color: white;
+    height: 35px;
+    width: 35px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.togglearea label span
+{
+   background-color: black;
+   height: 4px;
+   width: 80%;
+   margin: 2px 0px;
+   border-radius: 10px;
+}
+.togglearea{
+    display: none;
+}
+
+@media screen and (min-width: 1300px){
+    .details{
+        margin-top: 400px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    p{
+        font-size: 32px;
+    }
+
+    #About{
+        margin-top: 350px;
+        height: 900px;
+    }
+
+    #Songs{
+        margin-top: 200px;
+    }
+}
